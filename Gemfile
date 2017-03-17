@@ -1,9 +1,8 @@
 source 'https://rubygems.org'
 
-ruby '2.3.3'
+ruby '2.2.6'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-#gem 'rails', '4.2.7'
-gem 'rails', '4.1.9'
+gem 'rails', '4.2.7'
 # Use sqlite3 as the database for Active Record
 gem 'pg'
 
@@ -57,7 +56,6 @@ gem 'protected_attributes'
 
 gem "paperclip", "~> 4.2"
 gem 'will_paginate', '~> 3.0.6'
-#gem 'prototype-rails', github: 'rails/prototype-rails', branch: '4.2'
-gem 'rails-deprecated_sanitizer'
-gem 'prototype-rails', '~> 4.0', '>= 4.0.1'
+gem 'prototype-rails', github: 'rails/prototype-rails', branch: '4.2'
+
 gem "rails-i18n"
