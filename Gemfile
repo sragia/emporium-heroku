@@ -56,6 +56,6 @@ gem 'protected_attributes'
 
 gem "paperclip", "~> 4.2"
 gem 'will_paginate', '~> 3.0.6'
-gem 'prototype-rails', '~> 4.0', '>= 4.0.1'
+gem 'prototype-rails', github: 'rails/prototype-rails', branch: '4.2'
 
 gem "rails-i18n"
