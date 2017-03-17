@@ -1,0 +1,22 @@
+<h1><%=t :list_publishers %></h1>
+<div class="container">
+<table class="table table-striped">
+<tr>
+<th><%=t :name %></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+<% @publishers.each do |publisher| %>
+<tr>
+<td><%= publisher.name %></td>
+<td><%= link_to t(:show), :action => 'show', :id => publisher %></td>
+<td><%= link_to t(:edit), :action => 'edit', :id => publisher %></td>
+<td><%= button_to t(:destroy), {:action => 'destroy', :id => publisher},
+{:method => :delete, :confirm => 'Are you sure?'} %></td>
+</tr>
+<% end %>
+</table>
+</div>
+<br />
+<%= link_to t(:new_publisher), :action => 'new' %>

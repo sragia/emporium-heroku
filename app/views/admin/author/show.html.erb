@@ -1,0 +1,10 @@
+<dl>
+<dt><%=t :first_name %></dt>
+<dd><%= @author.first_name %></dd>
+<dt><%=t :last_name %></dt>
+<dd><%= @author.last_name %></dd>
+</dl>
+<p>
+<%= link_to t(:edit), :action => 'edit', :id => @author %> |
+<%= link_to t(:back), :action => 'index' %>
+</p>

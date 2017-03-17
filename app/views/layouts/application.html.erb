@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= @page_title || 'Emporium' %></title>
+  <link rel="stylesheet" href="/assets/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/flags-icon.css">
+  <%= stylesheet_link_tag "application", media: "all",
+  "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application",
+  "data-turbolinks-track" => true %>
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+  <%= csrf_meta_tags %>
+  <%= favicon_link_tag 'favicon.ico' %>
+</head>
+<body>
+  <div id="header">
+    <img id="logo" src="/assets/logo.png">
+  </div>
+  <div id="menu">
+    <ul>
+      <% if current_user %>
+        <li><a href="/admin/author"><%=t :authors %></a></li>
+        <li><a href="/admin/publishers"><%=t :publishers %></a></li>
+        <li><a href="/admin/books"><%=t :books %></a></li>
+      <% end %>
+      <li><a href="/"><%=t :catalog %></a></li>
+      <li><a href="/about"><%=t :about %></a></li>
+    </ul>
+  </div>
+  <div id="content">
+    <%= "<h1>#{@page_title}</h1>".html_safe if @page_title %>
+    <% if flash[:notice] %>
+      <div id="notice">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
+    <%= yield %>
+  </div>
+  <% if @cart and current_page?(root_path) %>
+    <div id="shopping_cart">
+      <%= render :partial => "cart/cart" %>
+    </div>
+    <%= drop_receiving_element("shopping_cart", :url =>
+    { :controller => "cart", :action => "add" }) %>
+  <% end %>
+  <div id="footer">
+    &copy; 2017 Emporium
+    <% if current_user %>
+      <%=t :signed_in %> <%= current_user.name %> | <%= link_to t(:logout), '/logout' %>
+    <% else %>
+      <%= link_to t(:login), '/login' %>
+    <% end %><div class="flags">
+    <a href="<% root_path %>?locale=lv"><img src="/assets/lv.svg" alt="Latvia" /></a>
+    <a href="<% root_path %>?locale=en"><img src="/assets/gb.svg" alt="English" /></a>
+    <a href="<% root_path %>?locale=es"><img src="/assets/es.svg" alt="Spain" /></a></div>
+  </div>
+</body>
+</html>

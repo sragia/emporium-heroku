@@ -1,0 +1,22 @@
+<ul id="books">
+<% for book in @books %>
+<li class="book" id="book_<%= book.id %>">
+<dl>
+<dt><%= link_to book.title, :action => "show", :id => book %></dt>
+<% for author in book.authors %>
+<dd class='bookAuthor'><%= author.last_name %>, <%= author.first_name %></dd>
+<% end %>
+<%= image_tag book.cover_image.url, :class => 'bookCoverSmall' unless book.cover_image.blank? %>
+<!--<dd><%= pluralize(book.page_count, t(:page)) %></dd>-->
+<dd><%=t :price %>: $<%= sprintf("%.2f", book.price) %></dd>
+<!--<dd><small><%=t :publisher %>: <%= book.publisher.name %></small></dd>-->
+<dd>
+<strong>
+<%= add_book_link(t(:add_to_cart), book) %>
+</strong>
+</dd>
+</dl>
+</li>
+<%= draggable_element("book_#{book.id}", :revert => true) %>
+<% end %>
+</ul>

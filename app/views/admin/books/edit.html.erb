@@ -1,0 +1,8 @@
+<h1>Editing book</h1>
+<%= form_tag({:action => 'update', :id => @book},
+{:multipart => true, :method => :put}) do %>
+<%= render :partial => 'form' %>
+<%= submit_tag t(:edit) %>
+<% end %>
+<%= link_to t(:show), :action => 'show', :id => @book %> |
+<%= link_to t(:back), :action => 'index' %>

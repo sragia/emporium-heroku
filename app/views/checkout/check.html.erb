@@ -1,0 +1,38 @@
+<dl>
+  <dt><%=t :first_name %></dt>
+  <dd><%= @person.first_name %></dd>
+  <dt><%=t :last_name %></dt>
+  <dd><%= @person.last_name %></dd>
+  <dt><%=t :email %></dt>
+  <dd><%= @person.email %></dd>
+  <dt><%=t :address %></dt>
+  <dd><%= @person.address %></dd>
+  <dt><%=t :phone_number %></dt>
+  <dd><%= @person.phone_number %></dd>
+
+</dl>
+<div class="container">
+  <%=t :cart_items %>
+<table class="table table-striped">
+  <tr>
+    <th><%=t :item %></th>
+    <th><%=t :amount %></th>
+    <th><%=t :price %></th>
+    <th><%=t :total %></th>
+  </tr>
+<% @cart.cart_items.each do |item| %>
+      <tr>
+        <td><%=h item.book.title %></td>
+        <td><%=h item.amount %></td>
+        <td>$<%=h item.price %></td>
+        <td><strong>$<%=h item.price*item.amount %></strong></td>
+      </tr>
+<% end %>
+</table>
+<div class="table-under">
+  <i><%=t :shipping %></i>: <%=h @person.shipping %> : <strong>$<%=h @person.shipprice %></strong> <br>
+  <i><%=t :total %></i>: <strong>$<%=h @cart.total+@person.shipprice %></strong> <br> <br>
+  <%=t :payment_by %>: <%= @person.payment %></div>
+</div>
+
+<%= link_to t(:confirm), :action => 'confirm' %>  | <a href="/"><%=t :cancel %></a>

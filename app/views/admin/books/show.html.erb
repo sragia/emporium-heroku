@@ -1,0 +1,26 @@
+<dl>
+<dt><%=t :title %></dt>
+<dd><%= @book.title %></dd>
+<dt><%=t :publisher %></dt>
+<dd><%= @book.publisher.name %></dd>
+<dt><%=t :published_at %></dt>
+<dd><%= @book.published_at.strftime("%m/%d/%Y at %I:%M%p") %></dd>
+<dt><%=t :authors %></dt>
+<dd><%= @book.authors.collect{|author| author.name }.join(', ') %></dd>
+<dt>ISBN</dt>
+<dd><%= @book.isbn %></dd>
+<dt>Blurb</dt>
+<dd><%= @book.blurb %></dd>
+<dt><%=t :price %></dt>
+<dd><%= @book.price %></dd>
+<dt><%=t :page_count %></dt>
+<dd><%= @book.page_count %></dd>
+<dt><%=t :cover_image %></dt>
+<% if @book.cover_image.nil? %>
+<dd>N/A</dd>
+<% else %>
+<dd><%= image_tag @book.cover_image.url %></dd>
+<% end %>
+</dl>
+<p><%= link_to t(:edit), :action => "edit", :id => @book %> |
+<%= link_to t(:back), :action => "index" %></p>

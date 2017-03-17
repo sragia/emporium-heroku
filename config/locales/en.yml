@@ -1,0 +1,95 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+en:
+  about_emporium: "About Emporium"
+  price: "Price"
+  publisher: "Publisher"
+  page: "page"
+  book_list: "Book list"
+  add_to_cart: "Add to cart"
+  authors: "Authors"
+  publishers: "Publishers"
+  books: "Books"
+  catalog: "Catalog"
+  about: "About"
+  shopping_cart: "Your Shopping Cart"
+  total: "Total"
+
+  # new
+  name: "Name"
+  edit: "Edit"
+  delete: "Delete"
+  show: "Show"
+  destroy: "Destroy"
+  title: "Title"
+  new_book: "New book"
+  list_publishers: "Listing publishers"
+  new_publisher: "New Publisher"
+  emporium_description: "Online bookstore located in downtown Riga, Latvia"
+  mail_addr: "Mailing Address"
+  emporium_addr: |
+    Emporium
+    P.O. Box LV-1658
+    Riga, Latvia
+  author_list: "Listing Authors"
+  new_author: "Add a new author"
+
+  signed_in: "Signed in as"
+  logout: "Logout"
+  login: "Login"
+
+  author_created: "Author %{name} was successfully created."
+  create_new_author: "Create new author"
+  edit_author: "Edit author"
+  author_succ_update: "Author successfully updated."
+  author_destroy: "Author %{name} was successfully deleted."
+  back: "Back"
+  first_name: "First name"
+  last_name: "Last name"
+  create: "Create"
+  published_at: "Published at"
+  cover_image: "Cover image"
+  page_count: "Page count"
+  book_created: "Book successfully created."
+  book_updated: "Book successfully updated."
+  book_destroyed: "Book successfully destroyed"
+  publisher_created: "Publisher successfully created."
+  publisher_update: "Publisher successfully updated."
+
+  next: "Next"
+  checkout: "Checkout"
+  clear_cart: "Clear cart"
+  address: "Address"
+  phone_number: "Phone Number"
+  email: "Email"
+  person_info: "Person Information"
+  shipping: "Shipping"
+  payment: "Payment"
+  amount: "Amount"
+  item: "Item"
+  cart_items: "Cart Items"
+  payment_by: "Payment by"
+  confirm: "Confirm"
+  cancel: "Cancel"
+
+  pc: "pc"
+  pcs: "pcs"
