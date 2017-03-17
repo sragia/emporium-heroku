@@ -23,7 +23,7 @@ class ApplicationController < ActionController::Base
     accept_lang = request.env['HTTP_ACCEPT_LANGUAGE']
     accept_lang = accept_lang.blank? ? nil : accept_lang[/[\A,;]+/]
     locale = params[:locale] || session[:locale] || accept_lang ||
-      DEFAULT_LOCALE
+      :lv
     begin
       I18n.locale = locale
       session[:locale] = locale
