@@ -2,8 +2,8 @@
 <html>
 <head>
   <title><%= @page_title || 'Emporium' %></title>
-  <link rel="stylesheet" href="/assets/stylesheets/bootstrap.min.css">
-  <link rel="stylesheet" href="/assets/stylesheets/flags-icon.css">
+  <%= stylesheet_link_tag "bootstrap.min", media: "all",
+  "data-turbolinks-track" => true %>
   <%= stylesheet_link_tag "application", media: "all",
   "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application",
@@ -51,9 +51,9 @@
     <% else %>
       <%= link_to t(:login), '/login' %>
     <% end %><div class="flags">
-    <a href="<% root_path %>?locale=lv"><img src="/assets/images/lv.svg" alt="Latvia" /></a>
-    <a href="<% root_path %>?locale=en"><img src="/assets/images/gb.svg" alt="English" /></a>
-    <a href="<% root_path %>?locale=es"><img src="/assets/images/es.svg" alt="Spain" /></a></div>
+    <a href="<% root_path %>?locale=lv"><img src="assets/images/lv.svg" alt="Latvia" /></a>
+    <a href="<% root_path %>?locale=en"><img src="assets/images/gb.svg" alt="English" /></a>
+    <a href="<% root_path %>?locale=es"><img src="assets/images/es.svg" alt="Spain" /></a></div>
   </div>
 </body>
 </html>
