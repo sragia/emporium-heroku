@@ -43,7 +43,7 @@
     <% end %>
     <%= yield %>
   </div>
-  <% if @cart and current_page?(url_for(:controller => 'catalog', :action => 'index')) or %>
+  <% if @cart and current_page?(url_for(:controller => 'catalog', :action => 'index'))%>
     <div id="shopping_cart">
       <%= render :partial => "cart/cart" %>
     </div>
