@@ -93,3 +93,10 @@ en:
 
   pc: "pc"
   pcs: "pcs"
+
+  shippingOption1: "Will be delivered to your address via courier 1-2 weeks (5$)"
+  shippingOption2: "Express delivery to your address 1-3 days (20$)"
+  shippingOption3: "Delivery by mail 2-4 weeks (free)"
+  paymentOption1: "By cash"
+  paymentOption2: "By online transaction"
+  thanksshopp: "Thanks for shopping in Emporium" 

@@ -1,4 +1,4 @@
 <%= error_messages_for 'person' %>
-    <p> <%= radio_button_tag 'shipping',  ['option1',50] %> Apple </p>
-    <p> <%= radio_button_tag 'shipping', ['orange',0]%> Orange </p>
-    <p> <%= radio_button_tag 'shipping', ['test',130]%> Test </p>
+    <p> <%= radio_button_tag 'shipping',  ['Courier',5] %> <%=t :shippingOption1 %> </p>
+    <p> <%= radio_button_tag 'shipping', ['Express',20]%> <%=t :shippingOption2 %>  </p>
+    <p> <%= radio_button_tag 'shipping', ['Mail',0]%> <%=t :shippingOption3 %>  </p>

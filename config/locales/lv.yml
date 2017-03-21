@@ -71,3 +71,10 @@ lv:
 
   pc: "gab"
   pcs: "gab"
+
+  shippingOption1: "Piegāde ar kurjerpastu 1-2 nedēļu laikā (5$)"
+  shippingOption2: "Ekspress piegāde uz jūsu adresi 1-3 dienu laikā (20$)"
+  shippingOption3: "Piegāde ar pasta palīdzību 2-4 nedēļu laikā (free)"
+  paymentOption1: "Skaidrā naudā piegādes brīdī"
+  paymentOption2: "Parskaitījums"
+  thanksshopp: "Paldies par iepirkšanos Emporium" 

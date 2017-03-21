@@ -93,3 +93,10 @@ es:
 
   pc: "pc"
   pcs: "pcs"
+
+  shippingOption1: "Será entregado a su dirección a través de mensajería 1-2 semanas (5$)"
+  shippingOption2: "Envío urgente a su dirección 1-3 días (20$)"
+  shippingOption3: "Entrega por correo 2-4 semanas (free)"
+  paymentOption1: "En efectivo"
+  paymentOption2: "Por transacción en línea"
+  thanksshopp: "Gracias por ir de compras en Emporium"
