@@ -54,7 +54,7 @@ gem 'puma'
 gem 'dynamic_form'
 gem 'protected_attributes'
 
-gem "paperclip", "~> 4.2"
+gem "paperclip"
 gem 'aws-sdk', '~> 2.3'
 gem 'will_paginate', '~> 3.0.6'
 gem 'prototype-rails', github: 'rails/prototype-rails', branch: '4.2'
